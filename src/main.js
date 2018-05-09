@@ -4,11 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 import '@/assets/styles/reset.css'
 import '@/assets/styles/border.css'
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
+Vue.use(VueAwesomeSwiper)
+
 //fastClick处理移动端300ms延时问题
 fastClick.attach(document.body)
 
