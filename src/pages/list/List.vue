@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="home">List</div>
+    <div class="home">这是List页面</div>
   </div>
 </template>
 
