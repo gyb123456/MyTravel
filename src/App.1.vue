@@ -15,7 +15,7 @@ export default {
   /* font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align谢谢诶: center;
   color: #2c3e50;
   margin-top: 60px; */
 }
