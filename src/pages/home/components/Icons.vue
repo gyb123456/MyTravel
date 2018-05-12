@@ -30,6 +30,8 @@
             </div>
             <p class="icon-desc">热门景点</p>
         </div>
+
+      
     </div>
     
 </template>
@@ -79,6 +81,6 @@ export default {
                 line-height .44rem
                 color $darkTextColor
                 text-align center
-                font-size 20px
+                font-size 15px
 
 </style>

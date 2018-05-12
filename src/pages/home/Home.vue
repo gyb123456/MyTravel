@@ -3,6 +3,7 @@
     <home-header></home-header>
     <home-swiper></home-swiper>
     <home-icons></home-icons>
+    <header-recommend></header-recommend>
     <div class="tiaozhuan">
         <router-link to="/list" >跳至列表页</router-link>
     </div>
@@ -13,13 +14,15 @@
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
+import HeaderRecommend from './components/Recommend'
 
 export default {
  name:'Home',
  components:{
      'HomeHeader':HomeHeader,
      'HomeSwiper':HomeSwiper,
-      HomeIcons
+      HomeIcons,
+      HeaderRecommend
 
  }
 }
@@ -27,7 +30,7 @@ export default {
 
 <style>
     .home{
-        font-size: 30px;
+        /* font-size: 30px; */
     }
     .tiaozhuan{
         margin-top: 150px
