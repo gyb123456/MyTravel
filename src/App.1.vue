@@ -1,6 +1,7 @@
 <template>
   <div id="app3332">
     <router-view/>
+    aaaaaaaa
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 export default {
   name: 'App'
 }
+
 </script>
 
 <style>
