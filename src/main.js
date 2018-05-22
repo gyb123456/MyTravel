@@ -10,11 +10,24 @@ import '@/assets/styles/reset.css'
 import '@/assets/styles/border.css'
 import 'swiper/dist/css/swiper.css'
 
+import axios from 'axios'
+
+var $axios = axios.create({
+  baseURL: "/",
+  withCredentials: true,
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
+  }
+})
+
+
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
 
 //fastClick处理移动端300ms延时问题
 fastClick.attach(document.body)
+
+Vue.prototype.$axios = $axios
 
 /* eslint-disable no-new */
 new Vue({

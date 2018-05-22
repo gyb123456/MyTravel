@@ -15,6 +15,15 @@ import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HeaderRecommend from './components/Recommend'
+// import axios from 'axios'
+
+// var $axios = axios.create({
+//   withCredentials: true,
+//   headers: {
+//     "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
+//   }
+// })
+
 
 export default {
  name:'Home',
@@ -24,6 +33,19 @@ export default {
       HomeIcons,
       HeaderRecommend
 
+ },
+ mounted(){
+     this.getHomeInfo()
+ },
+ methods:{
+     getHomeInfo(){
+        //  static/mock/index.json
+        //  http://10.1.30.208:50067/InfoIssue/routes/idAndName
+         this.$axios.get('http://10.1.30.72:8080/InfoIssue/routes/idAndName').then(res=>{
+             console.log(res)
+         });
+
+     }
  }
 }
 </script>
