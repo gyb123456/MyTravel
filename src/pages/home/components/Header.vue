@@ -4,7 +4,7 @@
       <input class="search-input" type="text" placeholder="请输入城市名">  
       <div class="rightBtn">
         <router-link to='/city'>
-          <button>确定</button>
+          <button class="btn">确定</button>
         </router-link>
       </div>
     </div>  
@@ -36,4 +36,8 @@ export default {
 .rightBtn
   float right 
   width 8%  
+  .btn
+    background #ffffff
+    margin-top 5px
+    width 33px
 </style>  
