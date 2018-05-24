@@ -35,25 +35,17 @@
                  </div>
              </div>
          </div>
-         <div class="area">
-             <div class="title border-topbottom">A</div>
+         <div class="area" 
+                v-for="(item,key) in cities" 
+                :key="key"
+                :ref="key">
+             <div class="title border-topbottom" v-text="key"></div>
+             <!-- [Object.keys(item)[0]] -->
              <div class="item-list">
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
+                <div class="item border-topbottom" v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</div>
+                <!-- <div class="item border-topbottom">阿拉尔--</div> -->
              </div>
-             <div class="title border-topbottom">B</div>
-             <div class="item-list">
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
-                <div class="item border-topbottom">阿拉尔</div>
-             </div>
+             
          </div>
         </div>
     </div>
@@ -63,8 +55,99 @@
 import Bscroll from "better-scroll"
 
 export default {
+    props: {
+        letter:String
+    },
+    data(){
+        return {
+            // cities:[
+            //         {'A':[
+            //             {name:'阿拉尔1',id:1},
+            //             {name:'阿拉尔2',id:2},
+            //             {name:'阿拉尔3',id:3},
+            //             {name:'阿拉尔4',id:4},
+            //             {name:'阿拉尔5',id:5},
+            //             {name:'阿拉尔6',id:6}
+            //             ]
+            //         },
+            //         {'B':[
+            //             {name:'阿拉尔1',id:1},
+            //             {name:'阿拉尔2',id:2},
+            //             {name:'阿拉尔3',id:3},
+            //             {name:'阿拉尔4',id:4},
+            //             {name:'阿拉尔5',id:5},
+            //             {name:'阿拉尔6',id:6}
+            //             ]
+            //         },
+            //         {'C':[
+            //             {name:'阿拉尔1',id:1},
+            //             {name:'阿拉尔2',id:2},
+            //             {name:'阿拉尔3',id:3},
+            //             {name:'阿拉尔4',id:4},
+            //             {name:'阿拉尔5',id:5},
+            //             {name:'阿拉尔6',id:6}
+            //             ]
+            //         },
+            //         {'D':[
+            //             {name:'阿拉尔1',id:1},
+            //             {name:'阿拉尔2',id:2},
+            //             {name:'阿拉尔3',id:3},
+            //             {name:'阿拉尔4',id:4},
+            //             {name:'阿拉尔5',id:5},
+            //             {name:'阿拉尔6',id:6}
+            //             ]
+            //         }
+            // ]
+            cities:{
+                    'A':[
+                        {name:'阿拉尔1',id:1},
+                        {name:'阿拉尔2',id:2},
+                        {name:'阿拉尔3',id:3},
+                        {name:'阿拉尔4',id:4},
+                        {name:'阿拉尔5',id:5},
+                        {name:'阿拉尔6',id:6}
+                        ]
+                    ,
+                    'B':[
+                        {name:'阿拉尔1',id:1},
+                        {name:'阿拉尔2',id:2},
+                        {name:'阿拉尔3',id:3},
+                        {name:'阿拉尔4',id:4},
+                        {name:'阿拉尔5',id:5},
+                        {name:'阿拉尔6',id:6}
+                        ]
+                    ,
+                    'C':[
+                        {name:'阿拉尔1',id:1},
+                        {name:'阿拉尔2',id:2},
+                        {name:'阿拉尔3',id:3},
+                        {name:'阿拉尔4',id:4},
+                        {name:'阿拉尔5',id:5},
+                        {name:'阿拉尔6',id:6}
+                        ]
+                    ,
+                    'D':[
+                        {name:'阿拉尔1',id:1},
+                        {name:'阿拉尔2',id:2},
+                        {name:'阿拉尔3',id:3},
+                        {name:'阿拉尔4',id:4},
+                        {name:'阿拉尔5',id:5},
+                        {name:'阿拉尔6',id:6}
+                        ]
+                    }
+        }
+    },
     mounted(){
         this.scroll = new Bscroll(this.$refs.wrapper, {})
+    },
+    watch:{
+        letter(){
+            console.log(this.letter)
+            if(this.letter){
+                const element = this.$refs[this.letter][0]
+                this.scroll.scrollToElement(element)
+            }
+        }
     }
 }
 </script>

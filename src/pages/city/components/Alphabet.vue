@@ -1,20 +1,22 @@
 <template>
     <div>
-        <ul class="list">
-            <li class="item">A</li>
-            <li class="item">A</li>
-            <li class="item">A</li>
-            <li class="item">A</li>
-            <li class="item">A</li>
-            <li class="item">A</li>
-            <li class="item">A</li>
+        <ul class="list" >
+            <li class="item" v-for="item of cities" :key="item" @click="clickAlphabet">{{item}}</li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-    
+    props: {
+        cities: Array //这样可以指定传入的类型，如果类型不对，会警告
+    },
+    methods :{
+        clickAlphabet (e){
+            this.$emit('change',e.target.innerText)
+            // console.log(e.target.innerText)
+        }
+    }
 }
 </script>
 

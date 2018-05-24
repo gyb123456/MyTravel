@@ -2,8 +2,8 @@
     <div>
         <city-header></city-header>
         <city-search></city-search>
-        <city-list></city-list>
-        <city-alphabet></city-alphabet>
+        <city-list :letter="letter"></city-list>
+        <city-alphabet :cities="cities" @change="clickAlphabet"></city-alphabet>
     </div>
 </template>
 
@@ -19,6 +19,18 @@ export default {
         CitySearch,
         CityList,
         CityAlphabet
+    },
+    data(){
+        return {
+            cities:['A','B','C','D','E','F','G'],
+            letter:''
+        }
+    },
+    methods:{
+        clickAlphabet(letter){
+            // console.log(letter)
+            this.letter=letter
+        }
     }
 }
 </script>
