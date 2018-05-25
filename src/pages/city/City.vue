@@ -1,9 +1,9 @@
 <template>
     <div>
         <city-header></city-header>
-        <city-search></city-search>
-        <city-list :letter="letter"></city-list>
-        <city-alphabet :cities="cities" @change="clickAlphabet"></city-alphabet>
+        <city-search :cities="cities"></city-search>
+        <city-list :letter="letter" :cities="cities"></city-list>
+        <city-alphabet @change="clickAlphabet"></city-alphabet>
     </div>
 </template>
 
@@ -22,14 +22,23 @@ export default {
     },
     data(){
         return {
-            cities:['A','B','C','D','E','F','G'],
+            cities:'',
             letter:''
         }
+    },
+    mounted(){
+        this.getCities()
     },
     methods:{
         clickAlphabet(letter){
             // console.log(letter)
             this.letter=letter
+        },
+        getCities(){
+            this.$axios.get('/static/mock/city.json').then(res=>{
+                this.cities=res.data.data.cities
+                console.log(res.data.data.cities)
+            });
         }
     }
 }

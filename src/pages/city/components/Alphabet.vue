@@ -8,8 +8,10 @@
 
 <script>
 export default {
-    props: {
-        cities: Array //这样可以指定传入的类型，如果类型不对，会警告
+    data(){
+        return {
+            cities:['A','B','C','D','E','F','G'],
+        }
     },
     methods :{
         clickAlphabet (e){

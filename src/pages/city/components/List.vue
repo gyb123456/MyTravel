@@ -56,85 +56,48 @@ import Bscroll from "better-scroll"
 
 export default {
     props: {
-        letter:String
+        letter:String,
+        cities:{}
     },
     data(){
         return {
-            // cities:[
-            //         {'A':[
-            //             {name:'阿拉尔1',id:1},
-            //             {name:'阿拉尔2',id:2},
-            //             {name:'阿拉尔3',id:3},
-            //             {name:'阿拉尔4',id:4},
-            //             {name:'阿拉尔5',id:5},
-            //             {name:'阿拉尔6',id:6}
+            // cities:{
+            //         'A':[
+            //                 {name:'阿拉尔1',id:1},
+            //                 {name:'阿拉尔2',id:2},
+            //                 {name:'阿拉尔3',id:3},
+            //                 {name:'阿拉尔4',id:4},
+            //                 {name:'阿拉尔5',id:5},
+            //                 {name:'阿拉尔6',id:6}
             //             ]
-            //         },
-            //         {'B':[
-            //             {name:'阿拉尔1',id:1},
-            //             {name:'阿拉尔2',id:2},
-            //             {name:'阿拉尔3',id:3},
-            //             {name:'阿拉尔4',id:4},
-            //             {name:'阿拉尔5',id:5},
-            //             {name:'阿拉尔6',id:6}
+            //         ,
+            //         'B':[
+            //                 {name:'阿拉尔1',id:1},
+            //                 {name:'阿拉尔2',id:2},
+            //                 {name:'阿拉尔3',id:3},
+            //                 {name:'阿拉尔4',id:4},
+            //                 {name:'阿拉尔5',id:5},
+            //                 {name:'阿拉尔6',id:6}
             //             ]
-            //         },
-            //         {'C':[
-            //             {name:'阿拉尔1',id:1},
-            //             {name:'阿拉尔2',id:2},
-            //             {name:'阿拉尔3',id:3},
-            //             {name:'阿拉尔4',id:4},
-            //             {name:'阿拉尔5',id:5},
-            //             {name:'阿拉尔6',id:6}
+            //         ,
+            //         'C':[
+            //                 {name:'阿拉尔1',id:1},
+            //                 {name:'阿拉尔2',id:2},
+            //                 {name:'阿拉尔3',id:3},
+            //                 {name:'阿拉尔4',id:4},
+            //                 {name:'阿拉尔5',id:5},
+            //                 {name:'阿拉尔6',id:6}
             //             ]
-            //         },
-            //         {'D':[
-            //             {name:'阿拉尔1',id:1},
-            //             {name:'阿拉尔2',id:2},
-            //             {name:'阿拉尔3',id:3},
-            //             {name:'阿拉尔4',id:4},
-            //             {name:'阿拉尔5',id:5},
-            //             {name:'阿拉尔6',id:6}
+            //         ,
+            //         'D':[
+            //                 {name:'阿拉尔1',id:1},
+            //                 {name:'阿拉尔2',id:2},
+            //                 {name:'阿拉尔3',id:3},
+            //                 {name:'阿拉尔4',id:4},
+            //                 {name:'阿拉尔5',id:5},
+            //                 {name:'阿拉尔6',id:6}
             //             ]
             //         }
-            // ]
-            cities:{
-                    'A':[
-                        {name:'阿拉尔1',id:1},
-                        {name:'阿拉尔2',id:2},
-                        {name:'阿拉尔3',id:3},
-                        {name:'阿拉尔4',id:4},
-                        {name:'阿拉尔5',id:5},
-                        {name:'阿拉尔6',id:6}
-                        ]
-                    ,
-                    'B':[
-                        {name:'阿拉尔1',id:1},
-                        {name:'阿拉尔2',id:2},
-                        {name:'阿拉尔3',id:3},
-                        {name:'阿拉尔4',id:4},
-                        {name:'阿拉尔5',id:5},
-                        {name:'阿拉尔6',id:6}
-                        ]
-                    ,
-                    'C':[
-                        {name:'阿拉尔1',id:1},
-                        {name:'阿拉尔2',id:2},
-                        {name:'阿拉尔3',id:3},
-                        {name:'阿拉尔4',id:4},
-                        {name:'阿拉尔5',id:5},
-                        {name:'阿拉尔6',id:6}
-                        ]
-                    ,
-                    'D':[
-                        {name:'阿拉尔1',id:1},
-                        {name:'阿拉尔2',id:2},
-                        {name:'阿拉尔3',id:3},
-                        {name:'阿拉尔4',id:4},
-                        {name:'阿拉尔5',id:5},
-                        {name:'阿拉尔6',id:6}
-                        ]
-                    }
         }
     },
     mounted(){
