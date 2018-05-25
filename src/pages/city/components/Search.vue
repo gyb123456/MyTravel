@@ -5,7 +5,7 @@
         </div>
         <div class="search-content" v-show="list.length">
             <ul>
-                <li v-for="item of list" :key="item.id">
+                <li v-for="item of list" :key="item.id" class="item">
                     {{item.name}}
                 </li>
             </ul>
@@ -68,9 +68,11 @@ export default {
         z-index 1
         overflow hidden
         position absolute
-        background red
+        background #F8F8FF
         top 1.58rem
         left 0
         right 0
         bottom 0
+        .item
+            line-height .6rem
 </style>
