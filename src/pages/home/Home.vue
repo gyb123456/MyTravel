@@ -41,9 +41,10 @@ export default {
      getHomeInfo(){
         //  static/mock/index.json
         //  http://10.1.30.208:50067/InfoIssue/routes/idAndName
-         this.$axios.get('http://10.1.30.72:8080/InfoIssue/routes/idAndName').then(res=>{
-             console.log(res)
-         });
+        
+        //  this.$axios.get('http://10.1.30.72:8080/InfoIssue/routes/idAndName').then(res=>{
+        //      console.log(res)
+        //  });
 
      }
  }

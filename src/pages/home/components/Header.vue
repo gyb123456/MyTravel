@@ -4,7 +4,10 @@
       <input class="search-input" type="text" placeholder="请输入城市名">  
       <div class="rightBtn">
         <router-link to='/city'>
-          <button class="btn">确定</button>
+          <div class="city">
+             {{this.$store.state.city}}
+             <!-- <button class="btn">确定</button> -->
+          </div>
         </router-link>
       </div>
     </div>  
@@ -36,8 +39,11 @@ export default {
 .rightBtn
   float right 
   width 8%  
-  .btn
-    background #ffffff
-    margin-top 5px
-    width 33px
+  // .btn
+  //   background #ffffff
+  //   margin-top 30px
+  //   width 33px
+.city
+   color #fff
+   margin-top 8px
 </style>  
